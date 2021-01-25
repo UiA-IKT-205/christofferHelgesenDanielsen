@@ -21,5 +21,10 @@ class ExampleUnitTest {
         assertEquals("00:00:00", millisecondsToDescriptiveTime(1))
         assertEquals("00:01:30", millisecondsToDescriptiveTime(90000))
         assertEquals("02:30:01",millisecondsToDescriptiveTime(9001000))
+
+        assertEquals("00:30:00", millisecondsToDescriptiveTime(1800000))
+        assertEquals("01:00:00", millisecondsToDescriptiveTime(3600000))
+        assertEquals("01:30:00", millisecondsToDescriptiveTime(5400000))
+        assertEquals("02:00:00", millisecondsToDescriptiveTime(7200000))
     }
 }
