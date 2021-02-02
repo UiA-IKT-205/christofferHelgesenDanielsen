@@ -18,7 +18,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.192" />
 
     <Button
         android:id="@+id/startCountdownButton"
@@ -30,55 +30,48 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countDownView"
-        app:layout_constraintVertical_bias="0.474" />
+        app:layout_constraintVertical_bias="0.589" />
 
-    <Button
-        android:id="@+id/countdown30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button30"
+
+    <SeekBar
+        android:id="@+id/countdownSlider"
+        android:layout_width="216dp"
+        android:layout_height="39dp"
+        android:max="300"
+        android:min="15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countDownView"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.085" />
 
-    <Button
-        android:id="@+id/countdown60"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button60"
+    <SeekBar
+        android:id="@+id/pauseCountDownSlider"
+        android:layout_width="216dp"
+        android:layout_height="39dp"
+        android:max="300"
+        android:min="15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countDownView"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.232" />
 
-    <Button
-        android:id="@+id/countdown90"
+    <EditText
+        android:id="@+id/workIntervalChoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button90"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/workIntervalChoice"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.278"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countDownView"
-        app:layout_constraintVertical_bias="0.279" />
-
-    <Button
-        android:id="@+id/countdown120"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button120"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.732"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countDownView"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.613" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

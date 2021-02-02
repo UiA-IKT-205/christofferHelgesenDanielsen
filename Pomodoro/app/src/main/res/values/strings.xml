@@ -6,5 +6,7 @@
     <string name="button60">60 min</string>
     <string name="button90">90 min</string>
     <string name="button120">120 min</string>
+    <string name="workIntervalChoice">1</string>
+
 
 </resources>
