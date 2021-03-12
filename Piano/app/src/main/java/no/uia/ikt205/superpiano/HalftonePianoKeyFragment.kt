@@ -9,8 +9,6 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_halftone_piano_key.view.*
 import no.uia.ikt205.superpiano.databinding.FragmentHalftonePianoKeyBinding
 
-// Her har jeg bare gjort nøyaktig det samme som med fulltoner, usikker om dette er riktig.
-// Får ikke halvtonene til å vise seg over fulltonene i layout.
 
 class HalftonePianoKeyFragment : Fragment() {
     private var _binding:FragmentHalftonePianoKeyBinding? = null

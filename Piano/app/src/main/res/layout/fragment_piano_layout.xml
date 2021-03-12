@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:id="@+id/layoutWhitePianoKeys"
-        android:layout_height="match_parent"
+        android:layout_height="340dp"
         android:layout_width="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,6 +31,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+
+    <EditText
+        android:id="@+id/fileNameTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ems="20"
+        android:hint="@string/file_name_for_tune"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/layoutWhitePianoKeys"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/saveScoreBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutWhitePianoKeys"
+
+        />
+
+    <Button
+        android:id="@+id/showScoreBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show"
+        app:layout_constraintEnd_toStartOf="@id/saveScoreBt"
+        app:layout_constraintTop_toBottomOf="@id/layoutWhitePianoKeys"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
