@@ -2,4 +2,7 @@
     <string name="app_name">SuperPiano</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">Save</string>
+    <string name="show">Open</string>
+    <string name="file_name_for_tune">file name for tune</string>
 </resources>

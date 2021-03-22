@@ -10,7 +10,7 @@
 
     <Button
         android:id="@+id/whitePianoKeyButton"
-        android:layout_height="355dp"
+        android:layout_height="320dp"
         android:layout_width="49dp"
         android:layout_margin="1dp"
         android:backgroundTint="@color/white"
