@@ -2,6 +2,7 @@ package no.uia.ikt205.superpiano
 
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
@@ -11,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.core.net.toUri
 import kotlinx.android.synthetic.main.fragment_piano_layout.view.*
 import no.uia.ikt205.superpiano.databinding.FragmentPianoLayoutBinding
 import no.uia.ikt205.superpiano.databinding.FragmentPianoLayoutBinding.*
@@ -24,6 +26,8 @@ import java.nio.file.Paths
 
 
 class PianoLayout : Fragment() {
+
+    var onSave:((file:Uri) -> Unit)? = null
 
     private var _binding:FragmentPianoLayoutBinding? = null
     private val binding get() = _binding!!
@@ -115,12 +119,13 @@ class PianoLayout : Fragment() {
             else
             {       // hvis antall noter er mer enn 0 og filen har navn og pathen ikke er 0
                 if (score.count() > 0 && fileName.isNotEmpty() && path != null){
-
+                    val file = File(path,fileName)
                     FileOutputStream(File(path,fileName),true).bufferedWriter().use { writer ->
                         // bufferedWriter lever her
                         score.forEach {
                             writer.write("${it.toString()}\n")
                         }
+                        this.onSave?.invoke(file.toUri())
                     }
                 }
                 else {
@@ -167,6 +172,19 @@ class PianoLayout : Fragment() {
         val scoreInnhold = bufferedReader.use {it.readText()}
 
         return scoreInnhold
+
+    }
+
+    private fun SaveFile(fileName:String, content:String){
+        val path = this.activity?.getExternalFilesDir(null)
+        if (path != null) {
+            val file = File(path, fileName)
+            FileOutputStream(file, true).bufferedWriter().use { writer ->
+                writer.write(content)
+            }
+
+            this.onSave?.invoke(file.toUri());
+        }
 
     }
 
